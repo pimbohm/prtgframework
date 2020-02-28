@@ -27,6 +27,7 @@
         </button>
         <div class="dropdown-content" id="myDropdownm">
             <a href="sensors.php">all Sensors</a>
+            <a href="sensorssort.php">Sensorssort</a>
         </div>
     </div>
 </div>
