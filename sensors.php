@@ -22,23 +22,23 @@ for ($i = 0; $i < 8729; $i++) {
     echo $url1['sensors'][$i]['status'];
 
     if ($url1['sensors'][$i]['status'] == "Up") {
-        echo "<img src='Green%20LED%20Bulb.jpg' style='width:50px; height:50px;'><br><br>";
+        echo "<img src='img/Green%20LED%20Bulb.jpg' style='width:50px; height:50px;'><br><br>";
     }
 
     if ($url1['sensors'][$i]['status'] == "Warning") {
-        echo "<img src='yellow%20light%20bulb.jpg' style='width:50px; height:50px;'><br><br>";
+        echo "<img src='img/yellow%20light%20bulb.jpg' style='width:50px; height:50px;'><br><br>";
     }
 
     if ($url1['sensors'][$i]['status'] == "Down") {
-        echo "<img src='red%20light%20bulb.jpg' style='width:50px; height:50px;'><br><br>";
+        echo "<img src='img/red%20light%20bulb.jpg' style='width:50px; height:50px;'><br><br>";
     }
 
     if ($url1['sensors'][$i]['status'] == "Paused  (paused)") {
-        echo "<img src='pause.png' style='width:50px; height:50px;'><br><br>";
+        echo "<img src='img/pause.png' style='width:50px; height:50px;'><br><br>";
     }
 
     if ($url1['sensors'][$i]['status'] == "Down (Acknowledged)") {
-        echo "<img src='uitroepteken.jpg' style='width:50px; height:50px;'><br><br>";
+        echo "<img src='img/uitroepteken.jpg' style='width:50px; height:50px;'><br><br>";
     }
 }
 ?>
