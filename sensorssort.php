@@ -16,11 +16,9 @@ include "home.php";
     <input type="hidden" name="warning" value="Warning">
     <input type="hidden" name="down" value="Down">
     <input type="hidden" name="downa" value="Down (Acknowledged)">
-    <input type="hidden" name="paused" value="Paused  (paused)">
     <input type="submit" name="u" value="Up">
     <input type="submit" name="warn" value="Warning">
     <input type="submit" name="dow" value="Down">
-    <input type="submit" name="pau" value="Paused">
 </form>
 <div id="up"></div>
 <div id="warning"></div>
