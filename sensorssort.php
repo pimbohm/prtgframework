@@ -69,7 +69,7 @@ if (isset($_POST["pau"])) {
 }
 
 function search($str) {
-    $url1 = file_get_contents("https://prtg.lumiad.com/api/table.json?content=sensors&output=json&columns=probe,group,device,sensor,status&count=9018&username=Pim%20Bohm&password=P1mP1mP1mP1m");
+    $url1 = file_get_contents("https://prtg.lumiad.com/api/table.json?content=sensors&output=json&columns=probe,group,device,sensor,status&count=100000&username=Pim%20Bohm&password=P1mP1mP1mP1m");
     $url1 = json_decode($url1, true);
     $getal = 0;
     global $getal;
