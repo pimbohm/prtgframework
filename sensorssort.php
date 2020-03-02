@@ -26,7 +26,6 @@ include "home.php";
 <div id="warning"></div>
 <div id="down"></div>
 <div id="downa"></div>
-<div id="paused"></div>
 
 <?php
 if (isset($_POST["u"])) {
@@ -60,20 +59,13 @@ if (isset($_POST["dow"])) {
         '</script>';
 }
 
-if (isset($_POST["pau"])) {
-    $paused = $_POST["paused"];
-    search($paused);
-    echo '<script type="text/javascript">' .
-        'document.getElementById("paused").innerHTML = "Paused  (paused) = ' . $getal . '";' .
-        '</script>';
-}
-
 function search($str) {
     $url1 = file_get_contents("https://prtg.lumiad.com/api/table.json?content=sensors&output=json&columns=probe,group,device,sensor,status&count=100000&username=Pim%20Bohm&password=P1mP1mP1mP1m");
     $url1 = json_decode($url1, true);
+    $count = count($url1['sensors']);
     $getal = 0;
     global $getal;
-    for ($i = 0; $i < 9018; $i++) {
+    for ($i = 0; $i < $count; $i++) {
         if ($url1['sensors'][$i]['status'] == $str) {
             echo $url1['sensors'][$i]['probe'] . ", ";
             echo $url1['sensors'][$i]['group'] . ", ";
