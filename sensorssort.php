@@ -22,34 +22,58 @@ include "home.php";
     <input type="submit" name="dow" value="Down">
     <input type="submit" name="pau" value="Paused">
 </form>
+<div id="up"></div>
+<div id="warning"></div>
+<div id="down"></div>
+<div id="downa"></div>
+<div id="paused"></div>
 
 <?php
 if (isset($_POST["u"])) {
     $up = $_POST["up"];
     search($up);
+    echo '<script type="text/javascript">' .
+        'document.getElementById("down").innerHTML = "Up = ' . $getal . '";' .
+        '</script>';
 }
 
 if (isset($_POST["warn"])) {
     $warning = $_POST["warning"];
     search($warning);
+    echo '<script type="text/javascript">' .
+        'document.getElementById("warning").innerHTML = "Warning = ' . $getal . '";' .
+        '</script>';
 }
 
 if (isset($_POST["dow"])) {
     $down = $_POST["down"];
     $downa = $_POST["downa"];
     search($down);
+    $down2 = $getal;
     search($downa);
+    $downa2 = $getal - $down2;
+    echo '<script type="text/javascript">' .
+        'document.getElementById("down").innerHTML = "Down = ' . $down2 . '";' .
+        '</script>';
+    echo '<script type="text/javascript">' .
+        'document.getElementById("downa").innerHTML = "Down (Acknowledged) = ' . $downa2 .'";' .
+        '</script>';
 }
 
 if (isset($_POST["pau"])) {
     $paused = $_POST["paused"];
     search($paused);
+    echo '<script type="text/javascript">' .
+        'document.getElementById("paused").innerHTML = "Paused  (paused) = ' . $getal . '";' .
+        '</script>';
 }
 
 function search($str) {
-    $url1 = file_get_contents("https://prtg.lumiad.com/api/table.json?content=sensors&output=json&columns=probe,group,device,sensor,status&count=8729&username=Pim%20Bohm&password=P1mP1mP1mP1m");
+    $url1 = file_get_contents("https://prtg.lumiad.com/api/table.json?content=sensors&output=json&columns=probe,group,device,sensor,status&count=9018&username=Pim%20Bohm&password=P1mP1mP1mP1m");
     $url1 = json_decode($url1, true);
-    for ($i = 0; $i < 8729; $i++) {
+    $getal = 0;
+    global $getal;
+    for ($i = 0; $i < 9018; $i++) {
         if ($url1['sensors'][$i]['status'] == $str) {
             echo $url1['sensors'][$i]['probe'] . ", ";
             echo $url1['sensors'][$i]['group'] . ", ";
@@ -57,6 +81,7 @@ function search($str) {
             echo $url1['sensors'][$i]['sensor'] . ", ";
             echo $url1['sensors'][$i]['status'] . ", ";
             echo "<img src='img/$str.jpg' style='width:50px; height:50px;'><br><br>";
+            $getal++;
         }
     }
 }
