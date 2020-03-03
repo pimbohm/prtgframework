@@ -28,6 +28,7 @@
         <div class="dropdown-content" id="myDropdownm">
             <a href="sensors.php">all Sensors</a>
             <a href="sensorssort.php">Sensorssort</a>
+            <a href="sortbyprobe.php">Sortbyprobe</a>
         </div>
     </div>
 </div>
