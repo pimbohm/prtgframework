@@ -35,7 +35,6 @@ if (isset($_POST['ok'])) {
         $sensor = json_decode($sensor, true);
         $sensorcount = count($sensor["sensors"]);
         for ($x = 0; $x < $sensorcount; $x++) {
-            echo $x . "<br>";
             echo $sensor["sensors"][$x]["objid"] . "<br>";
             echo $sensor["sensors"][$x]["probe"] . "<br>";
             echo $sensor["sensors"][$x]["group"] . "<br>";
