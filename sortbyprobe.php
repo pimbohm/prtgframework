@@ -26,6 +26,7 @@ for ($i = 0; $i < $probecount; $i++) {
 echo "<input type='submit' name='ok' value='Vieuw Sensordata'>";
 echo "</form>";
 echo "</div>";
+echo "<br><br>";
 
 if (isset($_POST['ok'])) {
 
@@ -34,17 +35,14 @@ if (isset($_POST['ok'])) {
         $sensor = file_get_contents("https://prtg.lumiad.com/api/table.json?content=sensors&output=json&columns=objid,probe,group,device,sensor,status,message,lastvalue,priority,favorite&id=$i&count=100000&noraw=1&usecaption=true&username=Pim%20Bohm&password=P1mP1mP1mP1m");
         $sensor = json_decode($sensor, true);
         $sensorcount = count($sensor["sensors"]);
+        echo "<hr>";
+        echo "<br><br>";
         for ($x = 0; $x < $sensorcount; $x++) {
-            echo $sensor["sensors"][$x]["objid"] . "<br>";
             echo $sensor["sensors"][$x]["probe"] . "<br>";
             echo $sensor["sensors"][$x]["group"] . "<br>";
             echo $sensor["sensors"][$x]["device"] . "<br>";
             echo $sensor["sensors"][$x]["sensor"] . "<br>";
-            echo $sensor["sensors"][$x]["status"] . "<br>";
-            echo $sensor["sensors"][$x]["message"] . "<br>";
-            echo $sensor["sensors"][$x]["lastvalue"] . "<br>";
-            echo $sensor["sensors"][$x]["priority"] . "<br>";
-            echo $sensor["sensors"][$x]["favorite"] . "<br>";
+            echo $sensor["sensors"][$x]["status"] . "<br><br>";
         }
     }
 }
