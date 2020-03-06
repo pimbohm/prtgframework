@@ -31,6 +31,15 @@
             <a href="sortbyprobe.php">Sortbyprobe</a>
         </div>
     </div>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="myFunctiona()">Sirjon Users
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdowna">
+            <a href="sirjonelim.php">Sirjonelim</a>
+            <a href="sirjondatacenter.php">Sirjondatacenter</a>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -59,6 +68,22 @@
     window.onclick = function(e) {
         if (!e.target.matches('.dropbtn')) {
             var myDropdown = document.getElementById("myDropdownm");
+            if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+            }
+        }
+    }
+
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+    function myFunctiona() {
+        document.getElementById("myDropdowna").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdowna");
             if (myDropdown.classList.contains('show')) {
                 myDropdown.classList.remove('show');
             }
