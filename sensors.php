@@ -25,20 +25,20 @@ for ($i = 0; $i < 8729; $i++) {
         echo "<img src='img/Up.jpg' style='width:50px; height:50px;'><br><br>";
     }
 
-    if ($url1['sensors'][$i]['status'] == "Warning") {
+    elseif ($url1['sensors'][$i]['status'] == "Warning") {
         echo "<img src='img/Warning.jpg' style='width:50px; height:50px;'><br><br>";
     }
 
-    if ($url1['sensors'][$i]['status'] == "Down") {
+    elseif ($url1['sensors'][$i]['status'] == "Down") {
         echo "<img src='img/Down.jpg' style='width:50px; height:50px;'><br><br>";
     }
 
-    if ($url1['sensors'][$i]['status'] == "Paused  (paused)") {
-        echo "<img src='img/Paused%20%20(paused).jpg' style='width:50px; height:50px;'><br><br>";
+    elseif ($url1['sensors'][$i]['status'] == "Down (Acknowledged)") {
+        echo "<img src='img/Down%20(Acknowledged).jpg' style='width:50px; height:50px;'><br><br>";
     }
 
-    if ($url1['sensors'][$i]['status'] == "Down (Acknowledged)") {
-        echo "<img src='img/Down%20(Acknowledged).jpg' style='width:50px; height:50px;'><br><br>";
+    else {
+        echo "<br><br>";
     }
 }
 ?>

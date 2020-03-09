@@ -8,7 +8,7 @@
 <body>
 <div class="navbar">
     <h1><a href="home.php">PRTG Visualisation Framework</a></h1>
-    <a href="history.php">Historic</a>
+    <a href="history.php">Ping Sensor Lumiad hq3 historic data</a>
     <a href="lumiusers.php">Users Lumiad</a>
     <a href="lumipinghq3.php">Ping Sensor Lumiad hq3</a>
     <div class="dropdown">
