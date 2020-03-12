@@ -193,7 +193,7 @@ $percentage7 = floor(($result7/$total) * 100);
         function staafDiagram() {
             var data = google.visualization.arrayToDataTable([
                 <?php
-                echo "['', 'personen', '%'],
+                echo "['', 'apparaten', '%'],
                 ['$device',$result,$percentage],
                 ['$device2',$result2,$percentage2],
                 ['$device3',$result3,$percentage3],
