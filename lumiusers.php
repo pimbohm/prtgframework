@@ -4,8 +4,8 @@ $url = file_get_contents($url);
 $url = json_decode($url, true);
 
 //echo "<div class='device'>";
-$id = 4974;
-$id2 = 4988;
+$id = 34840;
+$id2 = 34854;
 $body = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id&username=Pim%20Bohm&password=P1mP1mP1mP1m";
 $body = file_get_contents($body);
 $body = json_decode($body, true);
@@ -26,8 +26,8 @@ $result = $body['channels'][10]['lastvalue'] + $body2['channels'][10]['lastvalue
 //echo "</div>";
 
 //echo "<div class='device'>";
-$id3 = 4977;
-$id4 = 4992;
+$id3 = 34846;
+$id4 = 34860;
 $body3 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id3&username=Pim%20Bohm&password=P1mP1mP1mP1m";
 $body3 = file_get_contents($body3);
 $body3 = json_decode($body3, true);
@@ -48,8 +48,8 @@ $result2 = $body3['channels'][10]['lastvalue'] + $body4['channels'][10]['lastval
 //echo "</div>";
 
 //echo "<div class='device'>";
-$id5 = 4976;
-$id6 = 4990;
+$id5 = 34845;
+$id6 = 34859;
 $body5 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id5&username=Pim%20Bohm&password=P1mP1mP1mP1m";
 $body5 = file_get_contents($body5);
 $body5 = json_decode($body5, true);
@@ -70,8 +70,8 @@ $result3 = $body5['channels'][10]['lastvalue'] + $body6['channels'][10]['lastval
 //echo "</div>";
 
 //echo "<div class='device'>";
-$id7 = 4979;
-$id8 = 4993;
+$id7 = 34842;
+$id8 = 34855;
 $body7 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id7&username=Pim%20Bohm&password=P1mP1mP1mP1m";
 $body7 = file_get_contents($body7);
 $body7 = json_decode($body7, true);
@@ -92,8 +92,8 @@ $result4 = $body7['channels'][10]['lastvalue'] + $body8['channels'][10]['lastval
 //echo "</div>";
 
 //echo "<div class='device'>";
-$id9 = 4973;
-$id10 = 4987;
+$id9 = 34841;
+$id10 = 34857;
 $body9 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id9&username=Pim%20Bohm&password=P1mP1mP1mP1m";
 $body9 = file_get_contents($body9);
 $body9 = json_decode($body9, true);
@@ -114,8 +114,8 @@ $result5 = $body9['channels'][10]['lastvalue'] + $body10['channels'][10]['lastva
 //echo "</div>";
 
 //echo "<div class='device'>";
-$id11 = 4978;
-$id12 = 4989;
+$id11 = 34844;
+$id12 = 34858;
 $body11 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id11&username=Pim%20Bohm&password=P1mP1mP1mP1m";
 $body11 = file_get_contents($body11);
 $body11 = json_decode($body11, true);
@@ -136,8 +136,8 @@ $result6 = $body11['channels'][10]['lastvalue'] + $body12['channels'][10]['lastv
 //echo "</div>";
 
 //echo "<div class='device'>";
-$id13 = 4975;
-$id14 = 4991;
+$id13 = 34843;
+$id14 = 34856;
 $body13 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id13&username=Pim%20Bohm&password=P1mP1mP1mP1m";
 $body13 = file_get_contents($body13);
 $body13 = json_decode($body13, true);

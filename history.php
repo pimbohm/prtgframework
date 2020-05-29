@@ -37,7 +37,7 @@ if (isset($_POST["ok"])) {
 
     $interval = $_POST["interval"];
 
-    $url = file_get_contents("https://prtg.lumiad.com/historicdata_html.htm?id=4966&sdate=$sdateformat&edate=$edateformat&avg=$interval&pctavg=300&pctshow=false&pct=95&pctmode=false&hide=NaN&username=Pim%20Bohm&password=P1mP1mP1mP1m");
+    $url = file_get_contents("https://prtg.lumiad.com/historicdata_html.htm?id=34839&sdate=$sdateformat&edate=$edateformat&avg=$interval&pctavg=300&pctshow=false&pct=95&pctmode=false&hide=NaN&username=Pim%20Bohm&password=P1mP1mP1mP1m");
     echo $url;
 }
 ?>
