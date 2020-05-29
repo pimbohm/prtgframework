@@ -7,13 +7,14 @@
 </head>
 <body>
 <?php
+include "config.php";
 include "home.php";
 ?>
 <div id="h1">
     <h1>Sort By Probe</h1>
 </div>
 <?php
-$probe = file_get_contents("https://prtg.lumiad.com/api/table.json?content=probes&columns=objid,name&filter_parentid=0&count=100000&username=Pim%20Bohm&password=P1mP1mP1mP1m");
+$probe = file_get_contents("https://prtg.lumiad.com/api/table.json?content=probes&columns=objid,name&filter_parentid=0&count=100000&username=$username&password=$password");
 $probe = json_decode($probe, true);
 $probecount = count($probe["probes"]);
 

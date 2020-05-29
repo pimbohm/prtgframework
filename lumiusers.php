@@ -1,19 +1,20 @@
 <?php
-$url = "https://prtg.lumiad.com/api/table.json?content=devices&output=json&columns=device&id=4958&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+include "config.php";
+$url = "https://prtg.lumiad.com/api/table.json?content=devices&output=json&columns=device&id=4958&username=$username&password=$password";
 $url = file_get_contents($url);
 $url = json_decode($url, true);
 
 //echo "<div class='device'>";
 $id = 34840;
 $id2 = 34854;
-$body = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+$body = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id&username=$username&password=$password";
 $body = file_get_contents($body);
 $body = json_decode($body, true);
 //echo $url["devices"][3]["device"]."<br>";
 //echo $body['channels'][10]['name'] . "<br>";
 //echo $body['channels'][10]['lastvalue'] . "<br><br>";
 
-$body2 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id2&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+$body2 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id2&username=$username&password=$password";
 $body2 = file_get_contents($body2);
 $body2 = json_decode($body2, true);
 //echo $body2['channels'][10]['name'] . "<br>";
@@ -28,14 +29,14 @@ $result = $body['channels'][10]['lastvalue'] + $body2['channels'][10]['lastvalue
 //echo "<div class='device'>";
 $id3 = 34846;
 $id4 = 34860;
-$body3 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id3&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+$body3 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id3&username=$username&password=$password";
 $body3 = file_get_contents($body3);
 $body3 = json_decode($body3, true);
 //echo $url["devices"][4]["device"]."<br>";
 //echo $body3['channels'][10]['name'] . "<br>";
 //echo $body3['channels'][10]['lastvalue'] . "<br><br>";
 
-$body4 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id4&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+$body4 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id4&username=$username&password=$password";
 $body4 = file_get_contents($body4);
 $body4 = json_decode($body4, true);
 //echo $body4['channels'][10]['name'] . "<br>";
@@ -50,14 +51,14 @@ $result2 = $body3['channels'][10]['lastvalue'] + $body4['channels'][10]['lastval
 //echo "<div class='device'>";
 $id5 = 34845;
 $id6 = 34859;
-$body5 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id5&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+$body5 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id5&username=$username&password=$password";
 $body5 = file_get_contents($body5);
 $body5 = json_decode($body5, true);
 //echo $url["devices"][5]["device"]."<br>";
 //echo $body5['channels'][10]['name'] . "<br>";
 //echo $body5['channels'][10]['lastvalue'] . "<br><br>";
 
-$body6 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id6&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+$body6 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id6&username=$username&password=$password";
 $body6 = file_get_contents($body6);
 $body6 = json_decode($body6, true);
 //echo $body6['channels'][10]['name'] . "<br>";
@@ -72,14 +73,14 @@ $result3 = $body5['channels'][10]['lastvalue'] + $body6['channels'][10]['lastval
 //echo "<div class='device'>";
 $id7 = 34842;
 $id8 = 34855;
-$body7 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id7&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+$body7 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id7&username=$username&password=$password";
 $body7 = file_get_contents($body7);
 $body7 = json_decode($body7, true);
 //echo $url["devices"][6]["device"]."<br>";
 //echo $body7['channels'][10]['name'] . "<br>";
 //echo $body7['channels'][10]['lastvalue'] . "<br><br>";
 
-$body8 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id8&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+$body8 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id8&username=$username&password=$password";
 $body8 = file_get_contents($body8);
 $body8 = json_decode($body8, true);
 //echo $body8['channels'][10]['name'] . "<br>";
@@ -94,14 +95,14 @@ $result4 = $body7['channels'][10]['lastvalue'] + $body8['channels'][10]['lastval
 //echo "<div class='device'>";
 $id9 = 34841;
 $id10 = 34857;
-$body9 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id9&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+$body9 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id9&username=$username&password=$password";
 $body9 = file_get_contents($body9);
 $body9 = json_decode($body9, true);
 //echo $url["devices"][7]["device"]."<br>";
 //echo $body9['channels'][10]['name'] . "<br>";
 //echo $body9['channels'][10]['lastvalue'] . "<br><br>";
 
-$body10 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id10&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+$body10 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id10&username=$username&password=$password";
 $body10 = file_get_contents($body10);
 $body10 = json_decode($body10, true);
 //echo $body10['channels'][10]['name'] . "<br>";
@@ -116,18 +117,19 @@ $result5 = $body9['channels'][10]['lastvalue'] + $body10['channels'][10]['lastva
 //echo "<div class='device'>";
 $id11 = 34844;
 $id12 = 34858;
-$body11 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id11&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+$body11 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id11&username=$username&password=$password";
 $body11 = file_get_contents($body11);
 $body11 = json_decode($body11, true);
 //echo $url["devices"][8]["device"]."<br>";
 //echo $body11['channels'][10]['name'] . "<br>";
 //echo $body11['channels'][10]['lastvalue'] . "<br><br>";
 
-$body12 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id12&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+$body12 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id12&username=$username&password=$password";
 $body12 = file_get_contents($body12);
 $body12 = json_decode($body12, true);
 //echo $body12['channels'][10]['name'] . "<br>";
 //echo $body12['channels'][10]['lastvalue'];
+
 
 //echo "<hr>";
 
@@ -138,14 +140,14 @@ $result6 = $body11['channels'][10]['lastvalue'] + $body12['channels'][10]['lastv
 //echo "<div class='device'>";
 $id13 = 34843;
 $id14 = 34856;
-$body13 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id13&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+$body13 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id13&username=$username&password=$password";
 $body13 = file_get_contents($body13);
 $body13 = json_decode($body13, true);
 //echo $url["devices"][9]["device"]."<br>";
 //echo $body13['channels'][10]['name'] . "<br>";
 //echo $body13['channels'][10]['lastvalue'] . "<br><br>";
 
-$body14 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id14&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+$body14 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id14&username=$username&password=$password";
 $body14 = file_get_contents($body14);
 $body14 = json_decode($body14, true);
 //echo $body14['channels'][10]['name'] . "<br>";

@@ -58,7 +58,8 @@ if (isset($_POST["dow"])) {
 }
 
 function search($str) {
-    $url1 = file_get_contents("https://prtg.lumiad.com/api/table.json?content=sensors&output=json&columns=probe,group,device,sensor,status&count=100000&username=Pim%20Bohm&password=P1mP1mP1mP1m");
+    include "config.php";
+    $url1 = file_get_contents("https://prtg.lumiad.com/api/table.json?content=sensors&output=json&columns=probe,group,device,sensor,status&count=100000&username=$username&password=$password");
     $url1 = json_decode($url1, true);
     $count = count($url1['sensors']);
     $getal = 0;

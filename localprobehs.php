@@ -1,5 +1,6 @@
 <?php
-$url = "https://prtg.lumiad.com/api/table.json?content=values&output=json&columns=datetime,value_,coverage&id=1002&noraw=1&usecaption=true&username=Pim%20Bohm&password=P1mP1mP1mP1m";
+include "config.php";
+$url = "https://prtg.lumiad.com/api/table.json?content=values&output=json&columns=datetime,value_,coverage&id=1002&noraw=1&usecaption=true&username=$username&password=$password";
 $url = file_get_contents($url);
 $url = json_decode($url, true);
 

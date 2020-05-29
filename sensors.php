@@ -6,13 +6,14 @@
 </head>
 <body>
 <?php
+include "config.php";
 include "home.php";
 ?>
 <div id="h1">
     <h1>All Sensors</h1>
 </div>
 <?php
-$url1 = file_get_contents("https://prtg.lumiad.com/api/table.json?content=sensors&output=json&columns=probe,group,device,sensor,status&count=8729&username=Pim%20Bohm&password=P1mP1mP1mP1m");
+$url1 = file_get_contents("https://prtg.lumiad.com/api/table.json?content=sensors&output=json&columns=probe,group,device,sensor,status&count=8729&username=$username&password=$password");
 $url1 = json_decode($url1, true);
 for ($i = 0; $i < 8729; $i++) {
     echo $url1['sensors'][$i]['probe'] . ", ";
