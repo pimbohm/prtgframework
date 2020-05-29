@@ -2,7 +2,7 @@
 include "config.php"; // get your prtg details
 
 // make the api call to get the data
-$url = "https://prtg.lumiad.com/api/table.json**?content=values&output=json&columns=datetime,value_,coverage&id=1002&noraw=1&usecaption=true&username=$username&password=$password";
+$url = "https://prtg.lumiad.com/api/table.json?content=values&output=json&columns=datetime,value_,coverage&id=1002&noraw=1&usecaption=true&username=$username&password=$password";
 $url = file_get_contents($url);
 $url = json_decode($url, true);
 
@@ -20,7 +20,7 @@ $url = json_decode($url, true);
 
     </script>
 </head>
-<body onload="loadref(60000)"> // set refresh time in seconds
+<body onload="loadref(60000)"> <!-- set refresh time in seconds -->
 <?php
 include "home.php"; // get the navigation bar
 ?>

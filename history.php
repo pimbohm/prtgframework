@@ -17,7 +17,7 @@ include "home.php"; // get the navigation bar
 <div id="h1">
     <h1>Historic data</h1>
 </div>
-<form method="post"> // form to select the starting en endtime
+<form method="post"> <!-- form to select the starting and endtime -->
     start: <input type="datetime-local" name="sdate"><br>
     end: <input type="datetime-local" name="edate"><br>
     interval:

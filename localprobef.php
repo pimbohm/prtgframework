@@ -19,7 +19,7 @@ $url = json_decode($url, true);
 
     </script>
 </head>
-<body onload="loadref(60000)"> // set refresh time in seconds
+<body onload="loadref(60000)"> <!-- set refresh time in seconds -->
 <?php
 include "home.php"; // get the navigation bar
 ?>

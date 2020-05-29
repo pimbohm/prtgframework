@@ -222,7 +222,7 @@ $percentage7 = floor(($result7/$total) * 100);
 
     </script>
 </head>
-<body onload="loadref(60000)"> // set refresh time in seconds
+<body onload="loadref(60000)"> <!-- set refresh time in seconds -->
 <?php
 include "home.php"; // get the navigation bar
 ?>
@@ -251,7 +251,7 @@ echo "</div>";
 <br>
 <br>
 <br>
-// show the diagrams
+<!-- show the diagrams -->
 <div id="columnchart_material" style="width: 100%; height:300px;"></div>
 <div id="container">
     <div id="piechart" style="width: 60%; height: 400px;"></div>
