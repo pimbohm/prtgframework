@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include "config.php"; // get your ptg details
 
 $sensors = file_get_contents("https://prtg.lumiad.com/api/table.json?content=sensors&output=json&columns=objid, sensor&id=29967&noraw=1&usecaption=true&count=100000&username=$username&password=$password");
 $sensors = json_decode($sensors, true);
@@ -16,7 +16,7 @@ $uservalues  = [];
 </head>
 <body>
 <?php
-include "home.php";
+include "home.php"; // get the navigation bar
 ?>
 <div id="h1">
     <h1>Sirjondatacenter</h1>

@@ -11,13 +11,13 @@
 </head>
 <body>
 <?php
-include "config.php";
-include "home.php";
+include "config.php"; // get your ptg details
+include "home.php"; // get the navigation bar
 ?>
 <div id="h1">
     <h1>Historic data</h1>
 </div>
-<form method="post">
+<form method="post"> // form to select the starting en endtime
     start: <input type="datetime-local" name="sdate"><br>
     end: <input type="datetime-local" name="edate"><br>
     interval:
@@ -27,7 +27,7 @@ include "home.php";
     <input type="submit" name="ok">
 </form>
 <?php
-if (isset($_POST["ok"])) {
+if (isset($_POST["ok"])) { // show the results if the button is pressed.
     $sdatetime1 = explode("T", $_POST["sdate"]);
     $sdatetime2 = explode(":", $sdatetime1[1]);
     $sdateformat = $sdatetime1[0] . "-" . $sdatetime2[0] . "-" . "$sdatetime2[1]". "-00";
@@ -38,6 +38,7 @@ if (isset($_POST["ok"])) {
 
     $interval = $_POST["interval"];
 
+    // make the api call to get the data
     $url = file_get_contents("https://prtg.lumiad.com/historicdata_html.htm?id=34839&sdate=$sdateformat&edate=$edateformat&avg=$interval&pctavg=300&pctshow=false&pct=95&pctmode=false&hide=NaN&username=$username&password=$password");
     echo $url;
 }

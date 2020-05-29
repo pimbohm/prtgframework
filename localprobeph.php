@@ -1,5 +1,7 @@
 <?php
-include "config.php";
+include "config.php"; // get your prtg details
+
+// make the api call to get the data
 $url = "https://prtg.lumiad.com/api/table.json?content=values&output=json&columns=datetime,value_,coverage&id=1003&noraw=1&usecaption=true&usecaption=true&username=$username&password=$password";
 $url = file_get_contents($url);
 $url = json_decode($url, true);
@@ -9,7 +11,7 @@ $url = json_decode($url, true);
 <head>
 
     <script type="text/javascript">
-
+        // function to autorefresh page
         function loadref(time)
         {
             setTimeout("location.reload(true);",time);
@@ -17,14 +19,15 @@ $url = json_decode($url, true);
 
     </script>
 </head>
-<body onload="loadref(60000)">
+<body onload="loadref(60000)"> // set refresh time in seconds
 <?php
-include "home.php";
+include "home.php"; // get the navigation bar
 ?>
 <div id="h1">
     <h1>Probe health local probe</h1>
 </div>
 <?php
+// show the data in a table
 echo <<<TEKST
 <table border="1">
     <tr>

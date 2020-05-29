@@ -1,164 +1,104 @@
 <?php
-include "config.php";
+include "config.php";// get your prtg details
+
+// make the api call to get the data
 $url = "https://prtg.lumiad.com/api/table.json?content=devices&output=json&columns=device&id=4958&username=$username&password=$password";
 $url = file_get_contents($url);
 $url = json_decode($url, true);
 
-//echo "<div class='device'>";
 $id = 34840;
 $id2 = 34854;
+// make the api call to get the data
 $body = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id&username=$username&password=$password";
 $body = file_get_contents($body);
 $body = json_decode($body, true);
-//echo $url["devices"][3]["device"]."<br>";
-//echo $body['channels'][10]['name'] . "<br>";
-//echo $body['channels'][10]['lastvalue'] . "<br><br>";
 
+// make the api call to get the data
 $body2 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id2&username=$username&password=$password";
 $body2 = file_get_contents($body2);
 $body2 = json_decode($body2, true);
-//echo $body2['channels'][10]['name'] . "<br>";
-//echo $body2['channels'][10]['lastvalue'];
-
-//echo "<hr>";
 
 $result = $body['channels'][10]['lastvalue'] + $body2['channels'][10]['lastvalue'];
-//echo $result;
-//echo "</div>";
-
-//echo "<div class='device'>";
 $id3 = 34846;
 $id4 = 34860;
+// make the api call to get the data
 $body3 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id3&username=$username&password=$password";
 $body3 = file_get_contents($body3);
 $body3 = json_decode($body3, true);
-//echo $url["devices"][4]["device"]."<br>";
-//echo $body3['channels'][10]['name'] . "<br>";
-//echo $body3['channels'][10]['lastvalue'] . "<br><br>";
 
+// make the api call to get the data
 $body4 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id4&username=$username&password=$password";
 $body4 = file_get_contents($body4);
 $body4 = json_decode($body4, true);
-//echo $body4['channels'][10]['name'] . "<br>";
-//echo $body4['channels'][10]['lastvalue'];
-
-//echo "<hr>";
 
 $result2 = $body3['channels'][10]['lastvalue'] + $body4['channels'][10]['lastvalue'];
-//echo $result2;
-//echo "</div>";
-
-//echo "<div class='device'>";
 $id5 = 34845;
 $id6 = 34859;
+// make the api call to get the data
 $body5 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id5&username=$username&password=$password";
 $body5 = file_get_contents($body5);
 $body5 = json_decode($body5, true);
-//echo $url["devices"][5]["device"]."<br>";
-//echo $body5['channels'][10]['name'] . "<br>";
-//echo $body5['channels'][10]['lastvalue'] . "<br><br>";
 
+// make the api call to get the data
 $body6 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id6&username=$username&password=$password";
 $body6 = file_get_contents($body6);
 $body6 = json_decode($body6, true);
-//echo $body6['channels'][10]['name'] . "<br>";
-//echo $body6['channels'][10]['lastvalue'];
-
-//echo "<hr>";
 
 $result3 = $body5['channels'][10]['lastvalue'] + $body6['channels'][10]['lastvalue'];
-//echo $result3;
-//echo "</div>";
-
-//echo "<div class='device'>";
 $id7 = 34842;
 $id8 = 34855;
+// make the api call to get the data
 $body7 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id7&username=$username&password=$password";
 $body7 = file_get_contents($body7);
 $body7 = json_decode($body7, true);
-//echo $url["devices"][6]["device"]."<br>";
-//echo $body7['channels'][10]['name'] . "<br>";
-//echo $body7['channels'][10]['lastvalue'] . "<br><br>";
 
+// make the api call to get the data
 $body8 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id8&username=$username&password=$password";
 $body8 = file_get_contents($body8);
 $body8 = json_decode($body8, true);
-//echo $body8['channels'][10]['name'] . "<br>";
-//echo $body8['channels'][10]['lastvalue'];
-
-//echo "<hr>";
 
 $result4 = $body7['channels'][10]['lastvalue'] + $body8['channels'][10]['lastvalue'];
-//echo $result4;
-//echo "</div>";
-
-//echo "<div class='device'>";
 $id9 = 34841;
 $id10 = 34857;
+// make the api call to get the data
 $body9 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id9&username=$username&password=$password";
 $body9 = file_get_contents($body9);
 $body9 = json_decode($body9, true);
-//echo $url["devices"][7]["device"]."<br>";
-//echo $body9['channels'][10]['name'] . "<br>";
-//echo $body9['channels'][10]['lastvalue'] . "<br><br>";
 
+// make the api call to get the data
 $body10 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id10&username=$username&password=$password";
 $body10 = file_get_contents($body10);
 $body10 = json_decode($body10, true);
-//echo $body10['channels'][10]['name'] . "<br>";
-//echo $body10['channels'][10]['lastvalue'];
-
-//echo "<hr>";
 
 $result5 = $body9['channels'][10]['lastvalue'] + $body10['channels'][10]['lastvalue'];
-//echo $result5;
-//echo "</div>";
 
-//echo "<div class='device'>";
 $id11 = 34844;
 $id12 = 34858;
+// make the api call to get the data
 $body11 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id11&username=$username&password=$password";
 $body11 = file_get_contents($body11);
 $body11 = json_decode($body11, true);
-//echo $url["devices"][8]["device"]."<br>";
-//echo $body11['channels'][10]['name'] . "<br>";
-//echo $body11['channels'][10]['lastvalue'] . "<br><br>";
-
+// make the api call to get the data
 $body12 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id12&username=$username&password=$password";
 $body12 = file_get_contents($body12);
 $body12 = json_decode($body12, true);
-//echo $body12['channels'][10]['name'] . "<br>";
-//echo $body12['channels'][10]['lastvalue'];
-
-
-//echo "<hr>";
-
 $result6 = $body11['channels'][10]['lastvalue'] + $body12['channels'][10]['lastvalue'];
-//echo $result6;
-//echo "</div>";
-
-//echo "<div class='device'>";
 $id13 = 34843;
 $id14 = 34856;
+
+// make the api call to get the data
 $body13 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id13&username=$username&password=$password";
 $body13 = file_get_contents($body13);
 $body13 = json_decode($body13, true);
-//echo $url["devices"][9]["device"]."<br>";
-//echo $body13['channels'][10]['name'] . "<br>";
-//echo $body13['channels'][10]['lastvalue'] . "<br><br>";
 
+// make the api call to get the data
 $body14 = "https://prtg.lumiad.com/api/table.json?content=channels&output=json&columns=name,lastvalue_&id=$id14&username=$username&password=$password";
 $body14 = file_get_contents($body14);
 $body14 = json_decode($body14, true);
-//echo $body14['channels'][10]['name'] . "<br>";
-//echo $body14['channels'][10]['lastvalue'];
-
-//echo "<hr>";
 
 $result7 = $body13['channels'][10]['lastvalue'] + $body14['channels'][10]['lastvalue'];
-//echo $result7;
-//echo "</div>";
 
+// add all user counts together
 $total = $body['channels'][10]['lastvalue'] + $body2['channels'][10]['lastvalue'] +
     $body3['channels'][10]['lastvalue'] + $body4['channels'][10]['lastvalue'] +
     $body5['channels'][10]['lastvalue'] + $body6['channels'][10]['lastvalue'] +
@@ -192,6 +132,7 @@ $percentage7 = floor(($result7/$total) * 100);
         google.charts.load('current', {'packages':['bar']});
         google.charts.setOnLoadCallback(staafDiagram);
 
+        // make functions to show diagrams
         function staafDiagram() {
             var data = google.visualization.arrayToDataTable([
                 <?php
@@ -220,6 +161,7 @@ $percentage7 = floor(($result7/$total) * 100);
             chart.draw(data, google.charts.Bar.convertOptions(options));
         }
 
+        // function to autorefresh page
         function loadref(time)
         {
             setTimeout("location.reload(true);",time);
@@ -280,9 +222,9 @@ $percentage7 = floor(($result7/$total) * 100);
 
     </script>
 </head>
-<body onload="loadref(60000)">
+<body onload="loadref(60000)"> // set refresh time in seconds
 <?php
-include "home.php";
+include "home.php"; // get the navigation bar
 ?>
 <div id="h1">
     <h1>User count Lumiad</h1>
@@ -290,6 +232,7 @@ include "home.php";
 <?php
 echo "<div class='device'>";
 
+// show the total users
 echo "Total count";
 echo "<hr>";
 if ($total < 40) {
@@ -308,6 +251,7 @@ echo "</div>";
 <br>
 <br>
 <br>
+// show the diagrams
 <div id="columnchart_material" style="width: 100%; height:300px;"></div>
 <div id="container">
     <div id="piechart" style="width: 60%; height: 400px;"></div>

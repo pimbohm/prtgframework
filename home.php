@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> // show the navigation bar
 <html lang="en">
 <head>
     <meta charset="UTF-8">

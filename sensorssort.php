@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-include "home.php";
+include "home.php"; // get the navigation bar
 ?>
 <div id="h1">
     <h1>All Sensors</h1>
@@ -26,6 +26,7 @@ include "home.php";
 <div id="downa"></div>
 
 <?php
+// selected all sensors with selected status
 if (isset($_POST["u"])) {
     $up = $_POST["up"];
     search($up);
@@ -58,7 +59,9 @@ if (isset($_POST["dow"])) {
 }
 
 function search($str) {
-    include "config.php";
+    include "config.php"; // get your ptg details
+
+    // make an api call
     $url1 = file_get_contents("https://prtg.lumiad.com/api/table.json?content=sensors&output=json&columns=probe,group,device,sensor,status&count=100000&username=$username&password=$password");
     $url1 = json_decode($url1, true);
     $count = count($url1['sensors']);

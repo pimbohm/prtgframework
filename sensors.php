@@ -6,13 +6,14 @@
 </head>
 <body>
 <?php
-include "config.php";
-include "home.php";
+include "config.php"; // get your ptg details
+include "home.php"; // get the navigation bar
 ?>
 <div id="h1">
     <h1>All Sensors</h1>
 </div>
 <?php
+// make an api call to get data
 $url1 = file_get_contents("https://prtg.lumiad.com/api/table.json?content=sensors&output=json&columns=probe,group,device,sensor,status&count=8729&username=$username&password=$password");
 $url1 = json_decode($url1, true);
 for ($i = 0; $i < 8729; $i++) {
@@ -22,6 +23,7 @@ for ($i = 0; $i < 8729; $i++) {
     echo $url1['sensors'][$i]['sensor'] . ", ";
     echo $url1['sensors'][$i]['status'];
 
+    // show pictures by status
     if ($url1['sensors'][$i]['status'] == "Up") {
         echo "<img src='img/Up.jpg' style='width:50px; height:50px;'><br><br>";
     }

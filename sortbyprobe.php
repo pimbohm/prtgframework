@@ -7,8 +7,8 @@
 </head>
 <body>
 <?php
-include "config.php";
-include "home.php";
+include "config.php"; // get your ptg details
+include "home.php"; // get the navigation bar
 ?>
 <div id="h1">
     <h1>Sort By Probe</h1>
